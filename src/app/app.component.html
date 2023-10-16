@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+<div class="app-container"
+  [class.sidenav-expanded]="getExpanded"
+  [class.sidenav-pinned]="getPinned">
+  <app-sidenav></app-sidenav>
+  <div class="app-header">
+    <app-breadcrumb></app-breadcrumb>
+  </div>
+  <div id="products" class="app-frame" style="display: none;">
+    <app-table></app-table>
+    <h2>table</h2>
+  </div>
+  <div id="admin" class="app-frame" style="display: none;">
+    <app-list></app-list>
+    <h2>liste</h2>
+  </div>
+  <router-outlet></router-outlet>
+</div>
+
+<p-toast position="bottom-center"></p-toast>
+<p-toast key="topRight" position="top-right"></p-toast>
